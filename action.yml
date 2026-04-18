@@ -1,0 +1,59 @@
+name: AccessLint
+description: "Scan a single preview, staging, or live URL in CI for accessibility risks."
+author: a11ymind
+branding:
+  icon: eye
+  color: blue
+
+inputs:
+  url:
+    description: Single preview, staging, or live URL to scan with AccessLint
+    required: true
+  fail-on:
+    description: "Fail the step when risks at or above this severity are found. Allowed values: none, minor, moderate, serious, critical."
+    required: false
+    default: serious
+  comment-pr:
+    description: Post or update a concise summary comment on the triggering pull request when running in pull_request context
+    required: false
+    default: "false"
+  github-token:
+    description: GitHub token used for optional pull request comments. Defaults to github.token.
+    required: false
+    default: ${{ github.token }}
+  output-json:
+    description: Write a machine-readable JSON report as accesslint-report.json
+    required: false
+    default: "true"
+  output-markdown:
+    description: Write a human-readable Markdown summary as accesslint-summary.md
+    required: false
+    default: "true"
+  output-dir:
+    description: "Directory where report artifacts are written. Files are named accesslint-report.json and accesslint-summary.md."
+    required: false
+    default: .accesslint
+
+outputs:
+  score:
+    description: Accessibility score from 0 to 100 for the scanned URL
+  total-risks:
+    description: Total number of detected accessibility risks on the scanned URL
+  critical-count:
+    description: Count of critical accessibility risks
+  serious-count:
+    description: Count of serious accessibility risks
+  moderate-count:
+    description: Count of moderate accessibility risks
+  minor-count:
+    description: Count of minor accessibility risks
+  json-path:
+    description: Relative path to accesslint-report.json, or an empty string when JSON output is disabled
+  markdown-path:
+    description: Relative path to accesslint-summary.md, or an empty string when Markdown output is disabled
+  threshold-exceeded:
+    description: true when the configured fail-on threshold was exceeded, otherwise false
+
+runs:
+  using: node24
+  main: dist/index.js

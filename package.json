@@ -1,0 +1,24 @@
+{
+  "name": "a11ymind-accesslint",
+  "version": "1.0.0",
+  "private": false,
+  "scripts": {
+    "action:build": "node build.mjs",
+    "build": "npm run action:build",
+    "test": "node --import tsx --test tests/*.test.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@actions/core": "^3.0.0",
+    "@sparticuz/chromium": "^147.0.1",
+    "axe-core": "^4.10.0",
+    "puppeteer": "^23.10.0",
+    "puppeteer-core": "^24.41.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "esbuild": "^0.28.0",
+    "tsx": "^4.21.0",
+    "typescript": "^5"
+  }
+}
