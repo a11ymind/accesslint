@@ -1,5 +1,5 @@
 name: AccessLint — Accessibility Scan for CI
-description: "Scan preview, staging, or live URLs in CI for accessibility issues. Generate reports, fail builds by severity, and optionally comment results on pull requests."
+description: "Scan preview, staging, or live URLs in CI for accessibility issues. Generate reports, fail builds by severity, optionally comment results on pull requests."
 author: a11ymind
 branding:
   icon: shield
