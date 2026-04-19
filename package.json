@@ -2,6 +2,7 @@
   "name": "a11ymind-accesslint",
   "version": "1.0.0",
   "private": false,
+  "license": "BUSL-1.1",
   "scripts": {
     "action:build": "node build.mjs",
     "build": "npm run action:build",

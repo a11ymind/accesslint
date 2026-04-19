@@ -4,6 +4,12 @@ AccessLint is a lightweight JavaScript GitHub Action for scanning a preview or l
 
 Catch accessibility risks on a single preview, staging, or live URL before code merges or deploys.
 
+This repository is public and source-available under the Business Source
+License 1.1 (`BUSL-1.1`). The code converts to `Apache-2.0` on `2029-04-19`.
+See [LICENSE](LICENSE) for the exact terms, including the current production
+use grant and the restriction on offering a competing hosted service before the
+change date.
+
 It complements the main a11ymind product:
 
 - a11ymind app: post-deploy monitoring, saved sites, alerts, dashboards, reports
