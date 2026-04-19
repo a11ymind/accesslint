@@ -1,4 +1,4 @@
-name: Accesslint — Accessibility Scan for CI
+name: Accesslint - Accessibility Scan for CI
 description: "Scan a single preview, staging, or live URL in CI for accessibility risks."
 author: a11ymind
 branding:
